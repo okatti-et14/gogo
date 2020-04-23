@@ -5,6 +5,12 @@ import (
 	"reflect"
 )
 
+//Takumi a of int , b of int
+type Takumi struct {
+	a int
+	B int
+}
+
 func main() {
 	var i int = 5
 	j := &i
@@ -17,4 +23,7 @@ func main() {
 	fmt.Println(reflect.TypeOf(j))
 	fmt.Println(reflect.TypeOf(&j))
 	fmt.Println(reflect.TypeOf(*j))
+	takumi := Takumi{1, 2}
+	fmt.Println(reflect.TypeOf(takumi))
+	fmt.Println(reflect.TypeOf(takumi.a))
 }
