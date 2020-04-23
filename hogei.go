@@ -25,5 +25,6 @@ func main() {
 	fmt.Println(reflect.TypeOf(*j))
 	takumi := Takumi{1, 2}
 	fmt.Println(reflect.TypeOf(takumi))
-	fmt.Println(reflect.TypeOf(takumi.a))
+	fmt.Println(reflect.TypeOf(&takumi))
+	fmt.Println(reflect.TypeOf(takumi.a), i)
 }
