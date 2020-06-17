@@ -7,7 +7,7 @@ import (
 )
 
 type User struct {
-	Id   *int
+	Id   int
 	Name *string
 }
 
@@ -20,5 +20,4 @@ func main() {
 	}
 	fmt.Println(u)
 	fmt.Println(u.Id)
-	fmt.Println(*u.Id)
 }
