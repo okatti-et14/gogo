@@ -6,8 +6,9 @@ import (
 	"log"
 )
 
+// User is
 type User struct {
-	Id   int
+	ID   int
 	Name *string
 }
 
@@ -19,5 +20,5 @@ func main() {
 		log.Fatal(err)
 	}
 	fmt.Println(u)
-	fmt.Println(u.Id)
+	fmt.Println(u.ID)
 }
