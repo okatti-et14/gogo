@@ -15,4 +15,8 @@ func main() {
 		fmt.Println(index)
 		fmt.Println(val)
 	}
+
+	col2 := make([]*int, 0, len(collection))
+	fmt.Println(len(collection))
+	fmt.Println(col2)
 }
