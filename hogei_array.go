@@ -12,7 +12,11 @@ func main() {
 	fmt.Println(gg)
 	base := []int{}
 	i := []int{1, 2, 3}
+	j := []int{}
 	base = append(base, 1)
 	base = append(base, i...)
 	fmt.Println("base:", base)
+	base = append(base, j...)
+	fmt.Println("base:", base)
+	fmt.Println("j", j)
 }
