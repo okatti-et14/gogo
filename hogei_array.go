@@ -10,4 +10,9 @@ func main() {
 	fmt.Print(c)
 	gg := []int{1, 2, 3}
 	fmt.Println(gg)
+	base := []int{}
+	i := []int{1, 2, 3}
+	base = append(base, 1)
+	base = append(base, i...)
+	fmt.Println("base:", base)
 }
