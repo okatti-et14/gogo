@@ -1,11 +1,11 @@
 package main
 
-import "gogogo/add"
-
 func main() {
 	//nilPointter()
 	//devstrcase()
-	createRSA()
+	//createRSA()
 	//splitExa()
-	add.AddNum(1, 2)
+	//add.AddNum(1, 2)
+	outtime()
+	//buildErrors()
 }

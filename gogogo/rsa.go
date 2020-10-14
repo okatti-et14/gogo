@@ -22,16 +22,17 @@ func createRSA() {
 	f, err = os.Create("Private.key")
 	err = pem.Encode(f, &pem.Block{Type: "RSA PRIVATE KEY", Bytes: derRsaPrivateKey})
 	err = f.Close()
+
 	var rsaPublicKey crypto.PublicKey
 	rsaPublicKey = rsaPrivateKey.Public()
 	var derRsaPublicKey []byte
 	if rsaPublicKeyPointer, ok := rsaPublicKey.(*rsa.PublicKey); ok {
-		derRsaPublicKey = x509.MarshalPKCS1PublicKey(rsaPublicKeyPointer)
+		derRsaPublicKey, _ = x509.MarshalPKIXPublicKey(rsaPublicKeyPointer)
 	}
 	f, err = os.Create("derFormatRsaPublic.key")
 	_, err = f.Write(derRsaPublicKey)
 	err = f.Close()
 	f, err = os.Create("Public.key")
-	err = pem.Encode(f, &pem.Block{Type: "RSA PUBLIC KEY", Bytes: derRsaPublicKey})
+	err = pem.Encode(f, &pem.Block{Type: "PUBLIC KEY", Bytes: derRsaPublicKey})
 	err = f.Close()
 }
