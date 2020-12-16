@@ -19,7 +19,7 @@ type string2 struct {
 }
 
 func nilPointter() {
-	aa := &nilnil1{
+	/*aa := &nilnil1{
 		s1: []*string1{
 			{a: "a"},
 		},
@@ -33,6 +33,13 @@ func nilPointter() {
 	fmt.Println("a:", aa.s1[0].a == bb.s2[0].a)
 	fmt.Println("b:", aa.s1[0].b == bb.s2[0].b)
 	fmt.Println(aa.s1[0].b)
-	fmt.Println(bb.s2[0].b)
+	fmt.Println(bb.s2[0].b)*/
+	var aa *string
+	aaaaa(*aa)
 
+}
+
+func aaaaa(str string) {
+	fmt.Println(str)
+	fmt.Println(&str)
 }

@@ -15,5 +15,10 @@ func main() {
 	//tmpdefer()
 	//fmt.Println("main")
 	//zeroume()
-	checkStrpi()
+	//checkStrpi()
+	//nilPointter()
+	//goroutineSample()
+	//startDoc()
+	//Select()
+	SS()
 }
